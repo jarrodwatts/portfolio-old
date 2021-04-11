@@ -11,7 +11,7 @@ import Container from "@material-ui/core/Container";
 
 export const cache = createCache({ key: "css", prepend: true });
 
-export default function MyApp(props: AppProps) {
+export default function MyApp(props: AppProps): any {
   const { Component, pageProps } = props;
 
   React.useEffect(() => {

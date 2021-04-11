@@ -13,6 +13,7 @@ const useStyles = makeStyles((theme: Theme) =>
       position: "sticky",
       backdropFilter: "saturate(180%) blur(20px);",
       top: 0,
+      zIndex: 100, // Header goes above everything
     },
     menuButton: {
       marginRight: theme.spacing(2),
@@ -23,9 +24,8 @@ const useStyles = makeStyles((theme: Theme) =>
   })
 );
 
-export default function ButtonAppBar() {
+const Header = (): any => {
   const classes = useStyles();
-
   return (
     <Grid
       className={classes.root}
@@ -50,4 +50,6 @@ export default function ButtonAppBar() {
       </Grid>
     </Grid>
   );
-}
+};
+
+export default Header;
