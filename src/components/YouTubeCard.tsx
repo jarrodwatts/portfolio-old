@@ -1,6 +1,6 @@
 import React from "react";
 import { makeStyles, createStyles } from "@material-ui/core/styles";
-import { Grid, Paper } from "@material-ui/core";
+import { Grid, Paper, Typography } from "@material-ui/core";
 import YoutubeItem from "../types/YoutubeItem";
 import Image from "next/image";
 import ButtonBase from "@material-ui/core/ButtonBase";
@@ -13,7 +13,13 @@ const useStyles = makeStyles(() =>
   })
 );
 
-export default function RecipeReviewCard({ video }: { video: YoutubeItem }) {
+export default function RecipeReviewCard({
+  video,
+  inFront,
+}: {
+  video: YoutubeItem;
+  inFront: boolean;
+}) {
   const classes = useStyles();
 
   return (
@@ -33,6 +39,20 @@ export default function RecipeReviewCard({ video }: { video: YoutubeItem }) {
               objectFit="cover"
             />
           </Grid>
+          {inFront && (
+            <React.Fragment>
+              <Grid item>
+                <Typography variant="h6" component="h5">
+                  {video.snippet.title}
+                </Typography>
+              </Grid>
+              <Grid item>
+                {/* <Typography variant="body1" component="h6">
+                  {video.snippet.description}
+                </Typography> */}
+              </Grid>
+            </React.Fragment>
+          )}
         </Grid>
       </Paper>
     </ButtonBase>

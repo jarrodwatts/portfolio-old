@@ -7,6 +7,7 @@ import { makeStyles, createStyles } from "@material-ui/core/styles";
 import IconButton from "@material-ui/core/IconButton";
 import ArrowBackIosIcon from "@material-ui/icons/ArrowBackIos";
 import ArrowForwardIosIcon from "@material-ui/icons/ArrowForwardIos";
+import Zoom from "@material-ui/core/Zoom";
 
 const useStyles = makeStyles(() =>
   createStyles({
@@ -20,8 +21,8 @@ const useStyles = makeStyles(() =>
       flexWrap: "nowrap",
       alignItems: "center",
       justifyContent: "center",
-      marginBottom: "64px",
-      marginTop: "16px",
+      marginBottom: "72px",
+      marginTop: "48px",
     },
     front: {
       position: "absolute",
@@ -61,6 +62,7 @@ export default function Index(): JSX.Element {
     if (direction === "right") {
       const popped = tempStateCopy.shift() as YoutubeItem;
       tempStateCopy[4] = popped;
+
       return tempStateCopy;
     } else {
       const popped = tempStateCopy.pop() as YoutubeItem;
@@ -74,17 +76,23 @@ export default function Index(): JSX.Element {
   return (
     <React.Fragment>
       <div className={classes.parent}>
-        <div className={classes.front}>
-          <YoutubeCard video={videoOrder[0]} />
-        </div>
+        <Zoom in={true}>
+          <div className={classes.front}>
+            <YoutubeCard video={videoOrder[0]} inFront={true} />
+          </div>
+        </Zoom>
 
-        <div className={classes.left}>
-          <YoutubeCard video={videoOrder[4]} />
-        </div>
+        <Zoom in={true}>
+          <div className={classes.left}>
+            <YoutubeCard video={videoOrder[4]} inFront={false} />
+          </div>
+        </Zoom>
 
-        <div className={classes.right}>
-          <YoutubeCard video={videoOrder[1]} />
-        </div>
+        <Zoom in={true}>
+          <div className={classes.right}>
+            <YoutubeCard video={videoOrder[1]} inFront={false} />
+          </div>
+        </Zoom>
       </div>
 
       <div
