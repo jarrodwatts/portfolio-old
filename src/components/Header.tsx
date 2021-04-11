@@ -29,6 +29,7 @@ const Header = (): any => {
   return (
     <Grid
       className={classes.root}
+      component="div"
       container
       direction="row"
       alignItems="center"
