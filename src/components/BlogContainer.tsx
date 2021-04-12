@@ -11,12 +11,10 @@ export default function BlogContainer(): JSX.Element {
   if (error) return <div>Failed to load</div>;
   if (!data) return <div>Loading...</div>;
 
-  console.log(data);
-
   return (
     <Grid container direction="column" spacing={2}>
       {data.data.user.publication.posts.map((post) => (
-        <Grid item>
+        <Grid item key={post._id}>
           <BlogPost post={post} />
         </Grid>
       ))}

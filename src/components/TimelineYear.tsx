@@ -1,5 +1,4 @@
 import React from "react";
-import { Theme, createStyles, makeStyles, useTheme } from "@material-ui/core/styles";
 import { Grid, Typography, Divider } from "@material-ui/core";
 import TimelineEntry from "../components/TimelineEntry";
 

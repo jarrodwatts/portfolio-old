@@ -7,6 +7,8 @@ import Repository from "../../types/Repository";
  */
 export default async (_: NextApiRequest, res: NextApiResponse<Repository[]>) => {
   try {
+    // TODO: This uses the public API. Which gets rate limited badly. Should swap to oauth
+    // https://octokit.github.io/rest.js/v18#repos-list-for-user
     const apiUrl = "https://api.github.com/users/jarrodwatts/repos";
     const ytRes = await fetch(apiUrl);
     const ytData = await ytRes.json();

@@ -10,7 +10,6 @@ import useMediaQuery from "@material-ui/core/useMediaQuery";
 export default function BlogPost({ post }: { post: BlogPostType }): JSX.Element {
   const theme = useTheme();
   const matches = useMediaQuery(theme.breakpoints.up("sm"));
-  console.log(post);
 
   return (
     <Paper style={{ width: "100%", padding: "12px" }} elevation={3}>

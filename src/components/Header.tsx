@@ -1,6 +1,5 @@
 import React from "react";
 import { createStyles, makeStyles, Theme } from "@material-ui/core/styles";
-import Button from "@material-ui/core/Button";
 import { Grid, Typography } from "@material-ui/core";
 
 const useStyles = makeStyles((theme: Theme) =>
@@ -39,7 +38,7 @@ const Header = (): any => {
       <Grid item>
         <Typography variant="h6">👋 Jarrod Watts</Typography>
       </Grid>
-      <Grid item>
+      {/* <Grid item>
         <Grid container spacing={3} direction="row" alignItems="center" justify="center">
           <Grid item>
             <Button>Home</Button>
@@ -48,7 +47,7 @@ const Header = (): any => {
             <Button>Stats</Button>
           </Grid>
         </Grid>
-      </Grid>
+      </Grid> */}
     </Grid>
   );
 };
