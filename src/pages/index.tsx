@@ -4,7 +4,6 @@ import Typography from "@material-ui/core/Typography";
 import YoutubeCarousel from "../components/YoutubeCarousel";
 import BlogContainer from "../components/BlogContainer";
 import ProjectContainer from "../components/ProjectContainer";
-import Grid from "@material-ui/core/Grid";
 
 export default function Index() {
   return (
@@ -34,42 +33,13 @@ export default function Index() {
       <Typography variant="h4" style={{ marginBottom: "16px", marginTop: "32px" }}>
         Blog Posts 📝
       </Typography>
-
       <BlogContainer />
 
       {/* Projects */}
       <Typography variant="h4" style={{ marginBottom: "16px", marginTop: "64px" }}>
         Projects by Me 💕
       </Typography>
-
       <ProjectContainer />
-
-      {/* Timeline
-      <Typography variant="h4" style={{ marginBottom: "16px", marginTop: "48px" }}>
-        Timeline
-      </Typography>
-
-      <Grid container direction="column" spacing={2}>
-        <Grid item>
-          <TimelineYear year={"2021"} />
-        </Grid>
-        <Grid item>
-          <TimelineYear year={"2020"} />
-        </Grid>
-        <Grid item>
-          <TimelineYear year={"2019"} />
-        </Grid>
-      </Grid> */}
-
-      {/* Projects
-      <Typography variant="h4" style={{ marginBottom: "16px", marginTop: "64px" }}>
-        Contact Me 📝
-      </Typography>
-
-      <Grid container direction="column" alignItems="center" justify="flex-start">
-        <Grid item xs={1}></Grid>
-        <Grid item xs={11}></Grid>
-      </Grid> */}
     </Container>
   );
 }

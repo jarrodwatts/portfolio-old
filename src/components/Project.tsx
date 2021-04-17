@@ -6,6 +6,7 @@ import Typography from "@material-ui/core/Typography";
 import Repository from "../types/Repository";
 import ButtonBase from "@material-ui/core/ButtonBase";
 import LaunchIcon from "@material-ui/icons/Launch";
+import { toDate, upperFirst } from "../lib/formatters";
 
 const useStyles = makeStyles({
   root: {
@@ -27,15 +28,6 @@ const useStyles = makeStyles({
     overflowY: "hidden",
   },
 });
-
-const toDate = (date: string): string => {
-  const x = new Date(date);
-  return x.toLocaleDateString();
-};
-
-const upperFirst = (s: string): string => {
-  return s.charAt(0).toUpperCase() + s.slice(1);
-};
 
 export default function Project({ repo }: { repo: Repository }) {
   const classes = useStyles();

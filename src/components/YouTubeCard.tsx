@@ -34,7 +34,7 @@ export default function RecipeReviewCard({
               src={video.snippet.thumbnails.standard.url}
               alt={video.snippet.title}
               quality={100}
-              height={358} // the actual height is more , but 360 cuts off the black bars from the top and bottom of the image.
+              height={358} // the actual height is more , but 358 cuts off the black bars from the top and bottom of the image.
               width={640}
               objectFit="cover"
             />
@@ -45,11 +45,6 @@ export default function RecipeReviewCard({
                 <Typography variant="h6" component="h5">
                   {video.snippet.title}
                 </Typography>
-              </Grid>
-              <Grid item>
-                {/* <Typography variant="body1" component="h6">
-                  {video.snippet.description}
-                </Typography> */}
               </Grid>
             </React.Fragment>
           )}
