@@ -16,27 +16,41 @@ export default function Index() {
         I'm a developer / software engineer.
       </Typography>
       <Typography component="h2" variant="body1">
-        I've recently started creating content about my passion for programming and this portfolio
-        is a hub where I can share all of my work. Thanks for stopping by!
+        I've recently started creating content about my passion for programming.
+      </Typography>
+
+      <Typography component="h2" variant="body1">
+        This portfolio is a hub where I can share all of my work. Thanks for
+        stopping by!
       </Typography>
 
       {/* YouTube */}
       <Typography
         variant="h4"
-        style={{ marginBottom: "84px", marginTop: "48px", paddingBottom: "8px" }}
+        style={{
+          marginBottom: "84px",
+          marginTop: "48px",
+          paddingBottom: "8px",
+        }}
       >
         Recent Videos 🎬
       </Typography>
       <YoutubeCarousel />
 
       {/* Blog */}
-      <Typography variant="h4" style={{ marginBottom: "16px", marginTop: "32px" }}>
+      <Typography
+        variant="h4"
+        style={{ marginBottom: "16px", marginTop: "32px" }}
+      >
         Blog Posts 📝
       </Typography>
       <BlogContainer />
 
       {/* Projects */}
-      <Typography variant="h4" style={{ marginBottom: "16px", marginTop: "64px" }}>
+      <Typography
+        variant="h4"
+        style={{ marginBottom: "16px", marginTop: "64px" }}
+      >
         Projects by Me 💕
       </Typography>
       <ProjectContainer />

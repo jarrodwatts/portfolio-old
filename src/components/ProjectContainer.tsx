@@ -10,8 +10,6 @@ export default function ProjectContainer(): JSX.Element {
   if (error) return <div>Failed to load</div>;
   if (!data) return <div>Loading...</div>;
 
-  console.log("Repos", data);
-
   const gatherRepos = (initialRepos: Repository[]): Repository[] => {
     if (initialRepos.length > 0) {
       const displayRepoNames = [
