@@ -13,10 +13,14 @@ export default function ProjectContainer(): JSX.Element {
   const gatherRepos = (initialRepos: Repository[]): Repository[] => {
     if (initialRepos.length > 0) {
       const displayRepoNames = [
-        "donaldgenerated",
+        "aybow-fitness",
+        "trello-clone",
+        "code-like-google",
+        "pineapple",
         "portfolio",
         "spotify",
         "lolProject",
+        "donaldgenerated",
         "gaminginfluencersite",
       ];
       try {
