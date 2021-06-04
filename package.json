@@ -3,6 +3,10 @@
   "version": "5.0.0",
   "private": true,
   "dependencies": {
+    "@emotion/cache": "^11.4.0",
+    "@emotion/react": "^11.4.0",
+    "@emotion/server": "^11.4.0",
+    "@emotion/styled": "^11.3.0",
     "@material-ui/core": "next",
     "@material-ui/icons": "^4.11.2",
     "next": "^10.2.0",
