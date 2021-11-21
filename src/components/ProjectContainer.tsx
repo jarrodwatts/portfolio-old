@@ -22,6 +22,7 @@ export default function ProjectContainer(): JSX.Element {
         "lolProject",
         "donaldgenerated",
         "gaminginfluencersite",
+        "squidgame",
       ];
       try {
         return initialRepos
